@@ -2,8 +2,8 @@ import React from 'react';
 import Rows from './Rows';
 
 
-function Table (){  
-        return (
+function Table () {  
+            return (
             <table className="table table-hover table-dark">
   <thead>
     <tr>
