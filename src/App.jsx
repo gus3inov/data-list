@@ -9,8 +9,15 @@ class App extends Component {
     super(props);
 
     this.state = {
-      data: []
+      data: [],
+      description: null,
+      address: null,
+      city: null,
+      provinces: null,
+      indexCity: null
     }
+
+    this.handleClickUser = this.handleClickUser.bind(this);
   }
 
   componentDidMount(){
@@ -23,6 +30,12 @@ class App extends Component {
         })
   }
 
+  handleClickUser(){
+    this.setState({
+      description: this.state.dat a;
+    });
+  } 
+
   render() {
     return (
       <div className="App">
@@ -31,7 +44,16 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="main-table container">
-        <Table data={this.state.data}/>
+        <div className="row">
+        <div className="col-md-6">
+        <Table data={this.state.data} onClick={handleClickUser}/>
+        </div>
+        <div className="col-md-6">
+        <div className="results">
+        
+        </div>
+        </div>
+        </div>
         </div>
       </div>
     );
