@@ -6,13 +6,17 @@ class Table extends Component {
     super(props);
 
       this.state = {
-        sort: false
+        sortId: false,
+        sortFirstName: false,
+        sortLastName: false,
+        sortEmail: false,
+        sortPhone: false,
       }
   }
 
-  handleSort = () => {
+  handleSort = (ev) => {
     this.setState({
-      sort: !this.state.sort
+      sortId: !this.state.sortId
     });
   }
 
@@ -24,10 +28,14 @@ class Table extends Component {
       <th scope="col" style={{ cursor: 'pointer' }} className="thBlack" onClick = { this.handleSort }>
       #  <span className={ this.state.sort ?  `glyphicon glyphicon-hand-up` : `glyphicon glyphicon-hand-down`}></span>
       </th>
-      <th scope="col" className="thBlack">First Name</th>
-      <th scope="col" className="thBlack">Last Name</th>
-      <th scope="col" className="thBlack">email</th>
-      <th scope="col" className="thBlack">phone</th>
+      <th scope="col" style={{ cursor: 'pointer' }} className="thBlack" onClick = { this.handleSort }>
+      First Name <span className={ this.state.sort ?  `glyphicon glyphicon-hand-up` : `glyphicon glyphicon-hand-down`}></span></th>
+      <th style={{ cursor: 'pointer' }} scope="col" className="thBlack" onClick = { this.handleSort }>
+      Last Name <span className={ this.state.sort ?  `glyphicon glyphicon-hand-up` : `glyphicon glyphicon-hand-down`}></span></th>
+      <th style={{ cursor: 'pointer' }} scope="col" className="thBlack" onClick = { this.handleSort }>
+      email <span className={ this.state.sort ?  `glyphicon glyphicon-hand-up` : `glyphicon glyphicon-hand-down`}></span></th>
+      <th style={{ cursor: 'pointer' }} scope="col" className="thBlack" onClick = { this.handleSort }>
+      phone <span className={ this.state.sort ?  `glyphicon glyphicon-hand-up` : `glyphicon glyphicon-hand-down`}></span></th>
     </tr>
   </thead>
   <tbody> 
