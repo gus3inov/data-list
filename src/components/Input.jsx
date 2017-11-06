@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Input ({ onChange }){
     return (
-        <div>   
-            <input type="text" onChange= { onChange }/>
+        <div className="search-user">   
+            <input type="text" placeholder="Enter name..." className="search-user__input" onChange= { onChange }/>
         </div>
     );
 }
