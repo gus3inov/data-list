@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
+=======
+import React from 'react';
+>>>>>>> 026ccbcac9027bf5372ba2f2f9e35cff5c288bc5
 import Rows from './Rows';
 
 class Table extends Component { 
@@ -40,6 +44,7 @@ class Table extends Component {
   </thead>
   <tbody> 
      {
+<<<<<<< HEAD
        this.props.data.sort((a, b) => {
   if(this.state.sort){
     if (a.id > b.id) {
@@ -59,6 +64,9 @@ if (a.id < b.id) {
   // a должно быть равным b
   return 0;
 }).map((value, index) =>{
+=======
+       data.map((value, index) =>{
+>>>>>>> 026ccbcac9027bf5372ba2f2f9e35cff5c288bc5
         return <Rows 
           id        = { value.id } 
           key     =   {index}
@@ -69,7 +77,20 @@ if (a.id < b.id) {
           adress    = { value.adress }
           description     = { value.description }
          />
+<<<<<<< HEAD
        })
+=======
+       }).sort(function (a, b) {
+  if (a.id > b.id) {
+    return 1;
+  }
+  if (a.id < b.id) {
+    return -1;
+  }
+  // a должно быть равным b
+  return 0;
+})
+>>>>>>> 026ccbcac9027bf5372ba2f2f9e35cff5c288bc5
 
       }
        </tbody>
